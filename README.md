@@ -42,9 +42,9 @@ In order to use the site properly you will just need to be able to do a few thin
 
 #### Contributors
 
-*Ferny Castro*,
-*James Sciacca,*
-*Damian Smith,*
++ Ferny Castro
++ James Sciacca
++ Damian Smith
 
 ---
 
