@@ -1,6 +1,8 @@
 # Fitness Fusion Workout Maker
 
-Deployed Link - https://jamessciacca.github.io/fitness-fusion-workout-maker/
+Deployed Link:
+
+https://fernycastro8.github.io/fitness-fusion-workout-maker/
 
 ## Description
 
@@ -31,8 +33,8 @@ No installation is required, just click on the link and you are on your way to b
 
 In order to use the site properly you will just need to be able to do a few things!
 
-1-Be able to read
-2-Be able to make a choice
+1. Be able to read
+2. Be able to make a choice
 
 ---
 
