@@ -1,6 +1,7 @@
 var beginner = $('#beginner');
 var intermediate = $('#intermediate');
 var expert = $('#expert');
+
 var powerlifting = $("#powerlifting");
 var plyometrics = $('#plyometrics');
 var strengthTraining = $('#strength-training');
@@ -18,40 +19,44 @@ var createWorkout = $('#create-workout');
 var displayWorkout = $('#display-workout');
 var displayQuote = $('#display-quote');
 var logoBtn = $('#logo-btn');
+
 var workoutOptions = {
     exerciseLevel: '',
     exerciseType: '',
     muscleGroup: '',
 }
 
-function showFinalPage(){
+// function to display Welcome page
+function showWelcomePage() {
+    $('#welcome-screen').show();
     $('#questions-page').hide();
-    $('#final-page').removeClass('hide');
+    $('#final-page').hide();
+    $('#logo').hide();
 }
 
+// function to display queston page
 function showQuestionPage() {
     $('#welcome-screen').hide();
     $('#questions-page').show();
     $('#logo').show();
 }
 
-function showWelcomePage(){
-    $('#welcome-screen').show();
+// fuction to display last page, Retrieving Data from server side API
+function showFinalPage() {
     $('#questions-page').hide();
-    $('#final-page').hide();
-    $('#logo').hide();
+    $('#final-page').removeClass('hide');
 }
-// we created a jQuery function to hide the welcome page and display the questions page
+
+// jQuery function to hide the welcome page and display the questions page
 getStarted.click(showQuestionPage);
 createWorkout.click(showFinalPage);
 logoBtn.click(showWelcomePage);
 
-// muscle group 
+// function to the select the experience level from API
 function setExperienceLevel() {
     var btn = $(this)
     workoutOptions.exerciseLevel = btn.text()
     console.log(workoutOptions)
-
 }
 
 function setExerciseType() {
@@ -60,37 +65,39 @@ function setExerciseType() {
     console.log(workoutOptions)
 }
 
+// funtion to muscle group 
 function setMuscleGroup() {
     var btn = $(this)
     workoutOptions.muscleGroup = btn.text()
     console.log(workoutOptions)
 }
 
-function createQuote(){
+
+function createQuote() {
 
     var category = 'inspirational'
-    
+
     $.get({
-    method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
-        headers: { 'X-Api-Key': 'LYC7Sv/C6QGfB6EJhceMfw==m5c9bJZNY9gDM22Z'},
-    contentType: 'application/json',
-    success: function(result) {
-        console.log(result);
-        for (let i = 0; i < result.length; i++){
-            var html = `
+        method: 'GET',
+        url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
+        headers: { 'X-Api-Key': 'LYC7Sv/C6QGfB6EJhceMfw==m5c9bJZNY9gDM22Z' },
+        contentType: 'application/json',
+        success: function (result) {
+            console.log(result);
+            for (let i = 0; i < result.length; i++) {
+                var html = `
                 <div class='inspo-quote  p-5'>
                     <h3 class='font-bold'>Quote of the Day - ${result[i].quote} By - ${result[i].author}</h3>
                 </div>
             `;
-            displayQuote.append(html)
+                displayQuote.append(html)
+            }
+
+        },
+        error: function ajaxError(jqXHR) {
+            console.error('Error: ', jqXHR.responseText);
         }
-        
-    },
-    error: function ajaxError(jqXHR) {
-        console.error('Error: ', jqXHR.responseText);
-    }
-});
+    });
 }
 
 function createCustomWorkout() {
@@ -104,7 +111,7 @@ function createCustomWorkout() {
         contentType: 'application/json',
         success: function (result) {
             console.log(result);
-            for (let i = 0; i < result.length; i++){
+            for (let i = 0; i < result.length; i++) {
                 var html = `
                     <div class='workout p-5'>
                         <hr>

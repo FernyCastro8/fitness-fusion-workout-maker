@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Fusion - Your Destination to Fitness</title>
+    <!-- tailwindcss cdn link to style -->
+    <!-- needs to be placed before the local style.css file -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -13,7 +15,7 @@
 <body class="bg-rgba(88,146,194,255) flex flex-col items-center ">
 
     <div id="logo" class="hide">
-        <a id='logo-btn' href="#welcome-screen"><img src="assets/fitnessfusionlogo.png"></a>
+        <a id='logo-btn' href="#welcome-screen"><img src="assets/fitnessfusionlogo.png" alt="fitness-fusion-logo"></a>
     </div>
 
     <!-- add css from framework within the html for responsiveness -->
@@ -28,7 +30,7 @@
         <!-- about us needs to be added here! -->
     </div>
 
-    <section id='questions-page' class="hide">
+    <section id='questions-page' class="hide container">
         <div id="question-one" class=" flex flex-col space-x-4 justify-center items-center mt-2">
             <h2 class="mb-8">Choose Your Experience Level</h2>
 
@@ -82,8 +84,12 @@
         <div id="display-workout"></div>
     </section>
 
+    <!-- jQuery cdn link -->
+    <!-- needs to be placed befored the javascript file -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <!-- local script file -->
     <script src="js/script.js"></script>
 </body>
 
