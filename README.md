@@ -66,11 +66,14 @@ Create a cool custom workout based on your wants and needs in the Gym!
 ### Visit deployed 🔗 [Link](https://fernycastro8.github.io/fitness-fusion-workout-maker/)
 
 * Welcome Screen
+  
 ![image](https://user-images.githubusercontent.com/78399517/227413755-4635511d-5ed6-43f0-a598-8baa9a1baf59.png)
 
 * Question Screen
+  
 ![image](https://user-images.githubusercontent.com/78399517/227413853-8c4b67ac-9366-43a2-b066-e913af4ad640.png)
 
 * Final Screen
+  
 ![image](https://user-images.githubusercontent.com/78399517/227414003-1773e6f6-9580-4339-8abc-bff7f2cfc8b1.png)
 
